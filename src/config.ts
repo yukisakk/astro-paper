@@ -7,6 +7,7 @@ export const SITE = {
   ogImage: "assets/reki.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
+  featuredPerIndex: 3,
   postPerPage: 4,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: true,
