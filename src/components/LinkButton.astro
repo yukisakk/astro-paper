@@ -20,19 +20,19 @@ const {
 
 {
   disabled ? (
-    <div
+    <span
       id={id}
-      class:list={["group flex", className]}
+      class:list={["group inline-block", className]}
       title={title}
       aria-disabled={disabled}
     >
       <slot />
-    </div>
+    </span>
   ) : (
     <a
       id={id}
       {href}
-      class:list={["group flex hover:text-accent", className]}
+      class:list={["group inline-block hover:text-accent", className]}
       aria-label={ariaLabel}
       title={title}
     >
