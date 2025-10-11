@@ -70,17 +70,17 @@ const isActive = (path: string) => {
         >
           <li class="col-span-2">
             <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
-              Posts
+              投稿
             </a>
           </li>
           <li class="col-span-2">
             <a href="/tags" class:list={{ "active-nav": isActive("/tags") }}>
-              Tags
+              タグ
             </a>
           </li>
           <li class="col-span-2">
             <a href="/about" class:list={{ "active-nav": isActive("/about") }}>
-              About
+              プロフィール
             </a>
           </li>
           {
@@ -98,7 +98,7 @@ const isActive = (path: string) => {
                   title="Archives"
                 >
                   <IconArchive class="hidden sm:inline-block" />
-                  <span class="sm:sr-only">Archives</span>
+                  <span class="sm:sr-only">アーカイブ</span>
                 </LinkButton>
               </li>
             )
@@ -114,7 +114,7 @@ const isActive = (path: string) => {
               title="Search"
             >
               <IconSearch />
-              <span class="sr-only">Search</span>
+              <span class="sr-only">検索</span>
             </LinkButton>
           </li>
           {
