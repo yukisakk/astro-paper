@@ -52,6 +52,9 @@ html[data-theme="dark"] {
   footer {
     @apply mx-auto max-w-app px-4;
   }
+  iframe {
+    @apply w-full;
+  }
 }
 
 @utility max-w-app {
