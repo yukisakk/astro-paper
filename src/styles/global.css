@@ -53,7 +53,7 @@ html[data-theme="dark"] {
     @apply mx-auto max-w-app px-4;
   }
   iframe {
-    @apply w-full;
+    @apply aspect-16/9 h-auto w-full max-w-2xl;
   }
 }
 
