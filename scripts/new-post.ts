@@ -16,7 +16,7 @@ const args: string[] = process.argv.slice(2);
 
 if (args.length === 0) {
   console.error(`Error: No filename argument provided
-Usage: npm run new-post -- <filename>`); // eslint-disable-line no-console
+Usage: npm run new-post -- <filename>`);
   process.exit(1);
 }
 
@@ -34,7 +34,7 @@ const fullPath: string = path.join(targetDir, fileName);
 // 既にファイルが存在する場合はエラーで終了
 if (fs.existsSync(fullPath)) {
   console.error(`Error: File ${fullPath} already exists`);
-  process.exit(1); // eslint-disable-line no-console
+  process.exit(1);
 }
 
 // ディレクトリが存在しない場合は再帰的に作成
