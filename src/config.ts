@@ -15,7 +15,7 @@ export const SITE = {
   editPost: {
     enabled: true,
     text: "Edit page",
-    url: "https://github.com/yukisakk/astro-paper/edit/main/",
+    url: "https://github.com/yukisakk/astro-paper/blob/main/",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
