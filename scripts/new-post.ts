@@ -1,14 +1,44 @@
 import fs from "fs";
 import path from "path";
 
-/** 今日の日付を YYYY-MM-DD 形式で返す */
+function toISOStringWithTimezone(date: Date): string {
+  const year = date.getFullYear().toString();
+  const month = zeroPadding((date.getMonth() + 1).toString());
+  const day = zeroPadding(date.getDate().toString());
+
+  const hour = zeroPadding(date.getHours().toString());
+  const minute = zeroPadding(date.getMinutes().toString());
+  const second = zeroPadding(date.getSeconds().toString());
+
+  const localDate = `${year}-${month}-${day}`;
+  const localTime = `${hour}:${minute}:${second}`;
+
+  const diffFromUtc = date.getTimezoneOffset();
+
+  // UTCだった場合
+  if (diffFromUtc === 0) {
+    const tzSign = 'Z';
+    return `${localDate}T${localTime}${tzSign}`;
+  }
+
+  // UTCではない場合
+  const tzSign = diffFromUtc < 0 ? '+' : '-';
+  const tzHour = zeroPadding((Math.abs(diffFromUtc) / 60).toString());
+  const tzMinute = zeroPadding((Math.abs(diffFromUtc) % 60).toString());
+
+  return `${localDate}T${localTime}${tzSign}${tzHour}:${tzMinute}`;
+}
+
+function zeroPadding(s: string): string {
+  return ('0' + s).slice(-2);
+}
+
+/** ISO8601 string */
 function getDate(): string {
   const today = new Date();
-  const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, "0");
-  const day = String(today.getDate()).padStart(2, "0");
+  const jpIso = toISOStringWithTimezone(today)
 
-  return `${year}-${month}-${day}`;
+  return jpIso;
 }
 
 // コマンドライン引数（node, script, ...args）の3つ目以降を取得
