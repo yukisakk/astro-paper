@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
+    "new-post": "node scripts/new-post.ts",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint ."
