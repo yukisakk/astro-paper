@@ -99,119 +99,125 @@ export default async post => {
       type: "div",
       props: {
         style: {
-          background: "#fefbfb",
+          fontSize: 64,
+          backgroundImage: "url(https://og-image-ts-uayr.vercel.app/bg.png)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "100% 100%",
           width: "100%",
           height: "100%",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          paddingLeft: 50,
+          paddingRight: 50,
+          wordBreak: "break-all",
+          flexDirection: "column",
+          color: "black",
+          position: "relative",
         },
         children: [
           {
             type: "div",
             props: {
               style: {
-                position: "absolute",
-                top: "-1px",
-                right: "-1px",
-                border: "4px solid #000",
-                background: "#ecebeb",
-                opacity: "0.9",
-                borderRadius: "4px",
                 display: "flex",
+                alignItems: "center",
                 justifyContent: "center",
-                margin: "2.5rem",
-                width: "88%",
-                height: "80%",
+                margin: "0 auto",
               },
+              children: [
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      display: "flex",
+                      alignItems: "flex-start",
+                      textAlign: "center",
+                      paddingTop: 50,
+                      margin: "0 auto",
+                    },
+                    children: [],
+                  },
+                },
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      display: "flex",
+                      alignItems: "flex-start",
+                      textAlign: "justify",
+                      paddingTop: 35,
+                      width: "100%",
+                    },
+                    children: post.data.title,
+                  },
+                },
+              ],
             },
           },
           {
             type: "div",
             props: {
               style: {
-                border: "4px solid #000",
-                background: "#fefbfb",
-                borderRadius: "4px",
                 display: "flex",
-                justifyContent: "center",
-                margin: "2rem",
-                width: "88%",
-                height: "80%",
+                position: "absolute",
+                width: "100%",
+                bottom: 45,
+                left: 50,
+                justifyContent: "space-between",
+                alignItems: "center",
               },
-              children: {
-                type: "div",
-                props: {
-                  style: {
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    margin: "20px",
-                    width: "90%",
-                    height: "90%",
+              children: [
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      display: "flex",
+                      alignItems: "center",
+                    },
+                    children: [
+                      {
+                        type: "img",
+                        props: {
+                          src: "https://azmaru-blog-files.s3.ap-northeast-1.amazonaws.com/media/profile_pics/IMG_4445_BMxkUFg.jpeg",
+                          alt: "ひろぽっぽ",
+                          width: 100,
+                          height: 100,
+                          style: {
+                            marginTop: 10,
+                            borderRadius: 60,
+                            marginRight: 10,
+                          },
+                        },
+                      },
+                      {
+                        type: "div",
+                        props: {
+                          style: {
+                            color: "black",
+                            fontSize: 40,
+                            lineHeight: 1.5,
+                            margin: 0,
+                          },
+                          children: post.data.author,
+                        },
+                      },
+                    ],
                   },
-                  children: [
-                    {
-                      type: "p",
-                      props: {
-                        style: {
-                          fontSize: 72,
-                          fontWeight: "bold",
-                          maxHeight: "84%",
-                          overflow: "hidden",
-                        },
-                        children: post.data.title,
-                      },
-                    },
-                    {
-                      type: "div",
-                      props: {
-                        style: {
-                          display: "flex",
-                          justifyContent: "space-between",
-                          width: "100%",
-                          marginBottom: "8px",
-                          fontSize: 28,
-                        },
-                        children: [
-                          {
-                            type: "span",
-                            props: {
-                              children: [
-                                "by ",
-                                {
-                                  type: "span",
-                                  props: {
-                                    style: { color: "transparent" },
-                                    children: '"',
-                                  },
-                                },
-                                {
-                                  type: "span",
-                                  props: {
-                                    style: {
-                                      overflow: "hidden",
-                                      fontWeight: "bold",
-                                    },
-                                    children: post.data.author,
-                                  },
-                                },
-                              ],
-                            },
-                          },
-                          {
-                            type: "span",
-                            props: {
-                              style: { overflow: "hidden", fontWeight: "bold" },
-                              children: SITE.title,
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
                 },
-              },
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      color: "black",
+                      fontSize: 40,
+                      lineHeight: 1.5,
+                      paddingRight: 0,
+                      margin: "0",
+                    },
+                    children: "雪村朔太郎の日記",
+                  },
+                },
+              ],
             },
           },
         ],
