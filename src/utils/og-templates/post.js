@@ -2,6 +2,7 @@ import satori from "satori";
 // import { html } from "satori-html";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
+import { positionAt } from "node_modules/astro/dist/core/errors";
 
 // const markup = html`<div
 //       style={{
@@ -107,11 +108,12 @@ export default async post => {
           width: "100%",
           height: "100%",
           display: "flex",
-          paddingLeft: 65,
-          paddingRight: 65,
+          paddingLeft: 70,
+          paddingRight: 70,
           wordBreak: "break-all",
           flexDirection: "column",
           color: "black",
+          position: "relative",
         },
         children: [
           {
@@ -121,7 +123,7 @@ export default async post => {
                 fontSize: 64,
                 display: "flex",
                 textAlign: "left",
-                paddingTop: 75,
+                paddingTop: 85,
                 width: "98%",
                 fontWeight: "700",
                 maxWidth: "100%",
@@ -140,8 +142,8 @@ export default async post => {
                 display: "flex",
                 position: "absolute",
                 width: "100%",
-                bottom: 65,
-                left: 65,
+                bottom: 85,
+                left: 70,
                 justifyContent: "space-between",
                 alignItems: "center",
               },
@@ -152,6 +154,7 @@ export default async post => {
                     style: {
                       display: "flex",
                       alignItems: "center",
+                      justifyContent: "center",
                     },
                     children: [
                       {
@@ -162,11 +165,8 @@ export default async post => {
                           width: 100,
                           height: 100,
                           style: {
-                            marginTop: 10,
                             borderRadius: 60,
                             marginRight: 10,
-                            marginLeft: 0,
-                            marginBottom: 15,
                           },
                         },
                       },
