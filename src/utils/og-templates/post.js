@@ -2,7 +2,7 @@ import satori from "satori";
 // import { html } from "satori-html";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
-import { positionAt } from "node_modules/astro/dist/core/errors";
+//import { positionAt } from "node_modules/astro/dist/core/errors";
 
 // const markup = html`<div
 //       style={{
