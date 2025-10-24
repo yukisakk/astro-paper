@@ -3,7 +3,7 @@ export const SITE = {
   author: "yukisakk",
   profile: "https://www.yukisakk.me/",
   desc: "当サイトは、雪村 朔太郎が運営するウェブサイトです。書評、ブログ、ウェブ小説などを雑多に収録しています。",
-  title: "雪村朔太郎の日記",
+  title: "ゆきぽわーる",
   ogImage: "assets/reki.png",
   lightAndDarkMode: true,
   postPerIndex: 4,

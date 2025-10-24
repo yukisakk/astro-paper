@@ -197,7 +197,7 @@ export default async post => {
                       fontWeight: "550",
                       margin: "0",
                     },
-                    children: "雪村朔太郎の日記",
+                    children: "ゆきぽわーる",
                   },
                 },
               ],
