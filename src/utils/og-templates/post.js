@@ -101,10 +101,6 @@ export default async post => {
       props: {
         style: {
           fontSize: 64,
-          backgroundImage: "url(https://og-image-ts-uayr.vercel.app/bg.png)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "100% 100%",
           width: "100%",
           height: "100%",
           display: "flex",
