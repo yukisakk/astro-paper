@@ -84,7 +84,7 @@
     }
 
     details {
-      @apply block cursor-pointer bg-gray-100 p-5 text-foreground select-none [&_p]:hidden [&_ul]:!my-0;
+      @apply block cursor-pointer bg-gray-100 p-5 text-foreground select-none dark:bg-gray-500 [&_p]:hidden [&_ul]:!my-0;
     }
 
     summary {
