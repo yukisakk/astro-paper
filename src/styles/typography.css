@@ -17,7 +17,9 @@
       @apply italic;
     }
 
-    p,
+    p {
+      @apply dark:text-foreground;
+    }
     strong,
     ol,
     ul {
