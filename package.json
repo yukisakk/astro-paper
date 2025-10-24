@@ -19,6 +19,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.12.0",
+    "astro-custom-toc": "^2.0.46",
     "dayjs": "^1.11.13",
     "lodash.kebabcase": "^4.1.1",
     "rehype-external-links": "^3.0.0",

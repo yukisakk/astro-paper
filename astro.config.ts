@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import rehypeExternalLinks from "rehype-external-links";
+import customToc from "astro-custom-toc";
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -12,6 +13,16 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
 
+const tocTemplate = (html: string): string => {
+  return `<details>
+  <summary>目次</summary>
+      <nav>
+        ${html}
+    </nav>
+    </details>
+`.trim();
+};
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -19,6 +30,10 @@ export default defineConfig({
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
     }),
+    customToc({
+      template: tocTemplate,
+    }),
+    ,
   ],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],

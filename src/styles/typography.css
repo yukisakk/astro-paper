@@ -20,7 +20,10 @@
     p,
     strong,
     ol,
-    ul,
+    ul {
+      @apply list-none p-0;
+    }
+
     figcaption,
     table,
     code {
@@ -36,7 +39,7 @@
     }
 
     li {
-      @apply marker:text-accent;
+      @apply p-0 marker:text-accent;
     }
 
     hr {
@@ -79,7 +82,7 @@
     }
 
     details {
-      @apply inline-block cursor-pointer text-foreground select-none [&_p]:hidden [&_ul]:!my-0;
+      @apply block cursor-pointer bg-gray-100 p-5 text-foreground select-none [&_p]:hidden [&_ul]:!my-0;
     }
 
     summary {
