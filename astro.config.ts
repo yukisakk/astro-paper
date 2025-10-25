@@ -14,7 +14,7 @@ import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
 
 const tocTemplate = (html: string): string => {
-  return `<details>
+  return `<details open>
   <summary>目次</summary>
       <nav>
         ${html}
